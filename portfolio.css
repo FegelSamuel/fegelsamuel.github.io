@@ -45,7 +45,6 @@
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
-  scroll-padding-top: 108px; /* Adding this because I want navigating to account for the fact there's a sticky header. There are better ways to do it, but I'm lazy */
 }
 
 body {
@@ -71,6 +70,7 @@ img {
   margin-inline: auto;
 }
 
+
 .section {
   padding: 3.25rem 0;
 }
@@ -79,6 +79,10 @@ img {
   .section {
     padding: 4.25rem 0;
   }
+}
+.section,
+[id] {
+  scroll-margin-top: calc(var(--header-offset) + 16px); /* /* Adding this because I want navigating to account for the fact there's a sticky header. There are better ways to do it, but I'm lazy */ 
 }
 
 /* ---------- skip link (UX) ---------- */
