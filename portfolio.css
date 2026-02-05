@@ -119,11 +119,41 @@ img {
 }
 
 .header-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1.25rem;
   padding: 1.25rem 0;
 }
+
+@media (min-width: 900px) {
+  .header-grid {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1.5rem 0;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0; /* prevents overflow */
+  }
+
+  .nav {
+    flex: 0 0 auto;
+  }
+
+  /* put the note full width under the row */
+  .note {
+    flex-basis: 100%;
+  }
+
+  /* allow wrapping into a second row cleanly */
+  .header-grid {
+    flex-wrap: wrap;
+  }
+}
+
 
 @media (min-width: 900px) {
   .header-grid {
