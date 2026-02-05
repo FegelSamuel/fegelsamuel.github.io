@@ -4,131 +4,178 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>The Samuel Ma Emporium</title>
+  <link rel="stylesheet" href="portfolio.css" />
 </head>
 
 <body>
-  <header>
-    <h1>THE SAMUEL MA EMPORIUM</h1>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav aria-label="Primary">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <p class="kicker">Portfolio</p>
+        <h1 class="site-title">THE SAMUEL MA EMPORIUM</h1>
+        <p class="subtitle">Web · ML · Linux · Product/Project leadership</p>
+      </div>
 
-    <aside>
-      <p>
-        I am doing this for a class. At the time of writing, which is Monday, January 26th of 2026,
-        this is purely just HTML.
-      </p>
-    </aside>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <aside class="note" aria-label="Site note">
+        <p>
+          I am doing this for a class. At the time of writing, which is Monday, January 26th of 2026,
+          this is purely just HTML.
+        </p>
+      </aside>
+    </div>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About</h2>
+  <main id="main" class="site-main">
+    <section id="about" class="section">
+      <div class="container section-grid">
+        <div class="card prose">
+          <h2>About</h2>
 
-      <p>
-        Hello. I'm a student at the University of Texas at Dallas. My specializations are webdev,
-        machine learning, Linux, and project management.
-      </p>
-      <p>
-        I have experience with cloud deployments, product management, contracting, and have had two jobs
-        where I teach computer science subjects to other UTD students.
-      </p>
-      <p>
-        In terms of technical skills, I don't think I am anything special. The real meat of my skill
-        portfolio is how I work with people and my motivation to get things done. I'm only okay at
-        programming, but I really enjoy it, so you can easily work me very hard and it will take a lot
-        for me to start complaining, haha.
-      </p>
+          <p>
+            Hello. I'm a student at the University of Texas at Dallas. My specializations are webdev,
+            machine learning, Linux, and project management.
+          </p>
+          <p>
+            I have experience with cloud deployments, product management, contracting, and have had two jobs
+            where I teach computer science subjects to other UTD students.
+          </p>
+          <p>
+            In terms of technical skills, I don't think I am anything special. The real meat of my skill
+            portfolio is how I work with people and my motivation to get things done. I'm only okay at
+            programming, but I really enjoy it, so you can easily work me very hard and it will take a lot
+            for me to start complaining, haha.
+          </p>
+        </div>
 
-      <figure>
-        <img
-          src="https://media.licdn.com/dms/image/v2/D5603AQEptEYz2nvgIQ/profile-displayphoto-crop_800_800/B56Zl3OROIG0AI-/0/1758641853760?e=1770854400&v=beta&t=6qmfjeC_TYFyMlLRn6i94cz2xRIBLNmDfwnGVga_U14"
-          alt="Samuel Ma"
-        />
-        <figcaption>Samuel Ma</figcaption>
-      </figure>
+        <figure class="card portrait">
+          <img
+            src="https://media.licdn.com/dms/image/v2/D5603AQEptEYz2nvgIQ/profile-displayphoto-crop_800_800/B56Zl3OROIG0AI-/0/1758641853760?e=1770854400&v=beta&t=6qmfjeC_TYFyMlLRn6i94cz2xRIBLNmDfwnGVga_U14"
+            alt="Samuel Ma"
+            loading="lazy"
+          />
+          <figcaption>Samuel Ma</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p class="muted">A few builds I’ve shipped and iterated on. Clean details, fast UX.</p>
+        </div>
 
-      <section>
-        <h3>Agora Bloom</h3>
-        <p>Agora Bloom is an AI-powered website that supports local gardening and agriculture.</p>
-        <p><a href="#">Learn More</a></p>
-        <ul>
-          <li>
-            Machine Learning models that recommend optimal fruit, vegetable, and crop choices only from a
-            user's location. Currently, what's been done is that we have a KNN that we validated with
-            splitting our testing and training data, and with k-fold cross validation. It has a ~98%
-            F1-score
-          </li>
-          <li>General helpdesk for questions powered by ollama.</li>
-          <li>We have a forum that mimics reddit for connecting communities.</li>
-        </ul>
-      </section>
+        <div class="cards">
+          <article class="card project">
+            <header class="project-head">
+              <h3>Agora Bloom</h3>
+              <p class="muted">AI-powered website that supports local gardening and agriculture.</p>
+            </header>
 
-      <section>
-        <h3>Rainbow Roundup</h3>
-        <p>Calendar and Event planning application that supports LGBT families.</p>
-        <p><a href="https://rainbow-roundup.npts.tech">Learn More</a></p>
-        <ul>
-          <li>Google Maps and Google Calendar integration.</li>
-          <li>betterauth integration.</li>
-          <li>In-house merchandise system powered by Stripe.</li>
-          <li>Deployed on AWS EC2</li>
-        </ul>
-      </section>
+            <ul class="bullets">
+              <li>
+                Machine Learning models that recommend optimal fruit, vegetable, and crop choices only from a
+                user's location. Currently, what's been done is that we have a KNN that we validated with
+                splitting our testing and training data, and with k-fold cross validation. It has a ~98%
+                F1-score
+              </li>
+              <li>General helpdesk for questions powered by ollama.</li>
+              <li>We have a forum that mimics reddit for connecting communities.</li>
+            </ul>
 
-      <section>
-        <h3>UTDesign | Monitor Dashboard</h3>
-        <p>Shove a raspberry pi into a monitor and it'll play whatever slideshow you want.</p>
-        <p><a href="https://github.com/UTDallasEPICS/UTDesign-Monitor-Dashboard">Learn More</a></p>
-        <ul>
-          <li>Infinite range.</li>
-          <li>Bash script to get around the fact that the deployed server cannot initiate connection.</li>
-          <li>Can display images, videos, and websites using iframes.</li>
-        </ul>
-      </section>
+            <div class="project-actions">
+              <a class="button" href="#" aria-label="Learn more about Agora Bloom">Learn More</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <header class="project-head">
+              <h3>Rainbow Roundup</h3>
+              <p class="muted">Calendar and event planning application that supports LGBT families.</p>
+            </header>
+
+            <ul class="bullets">
+              <li>Google Maps and Google Calendar integration.</li>
+              <li>betterauth integration.</li>
+              <li>In-house merchandise system powered by Stripe.</li>
+              <li>Deployed on AWS EC2</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="button" href="https://rainbow-roundup.npts.tech" aria-label="Learn more about Rainbow Roundup">Learn More</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <header class="project-head">
+              <h3>UTDesign | Monitor Dashboard</h3>
+              <p class="muted">Raspberry Pi signage that plays a slideshow you control.</p>
+            </header>
+
+            <ul class="bullets">
+              <li>Infinite range.</li>
+              <li>Bash script to get around the fact that the deployed server cannot initiate connection.</li>
+              <li>Can display images, videos, and websites using iframes.</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="button" href="https://github.com/UTDallasEPICS/UTDesign-Monitor-Dashboard" aria-label="Learn more about UTDesign Monitor Dashboard">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="muted">Quick message. Simple form. No friction.</p>
+        </div>
 
-      <form action="mailto:samuelma1200@gmail.com" method="post" enctype="text/plain">
-        <p>
-          <label for="name">Name</label><br />
-          <input id="name" name="name" type="text" required />
-        </p>
+        <form class="card form" action="mailto:samuelma1200@gmail.com" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" />
+          </div>
 
-        <p>
-          <label for="email">Email</label><br />
-          <input id="email" name="email" type="email" required />
-        </p>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </div>
 
-        <p>
-          <label for="message">Message</label><br />
-          <textarea id="message" name="message" required></textarea>
-        </p>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required rows="6"></textarea>
+          </div>
 
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+          <div class="form-actions">
+            <button class="button button-primary" type="submit">Send</button>
+            <p class="fineprint">This uses <code>mailto:</code> and will open your email app.</p>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>
-      Copyright text blah blah. Find me on
-      <a href="https://www.linkedin.com/in/samuel-ma-dfs/">LinkedIn</a>
-    </p>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="muted">
+        Copyright text blah blah. Find me on
+        <a class="link" href="https://www.linkedin.com/in/samuel-ma-dfs/">LinkedIn</a>
+      </p>
+      <p class="muted small">Built with HTML + CSS.</p>
+    </div>
   </footer>
 </body>
 </html>
-
